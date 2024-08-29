@@ -1,0 +1,45 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.5px;
+    font-family: 'jost';
+}
+
+/* Global styles */
+html,
+body {
+    text-transform: capitalize;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: #F5F5F5;
+}
+
+/* colors */
+:root{
+  --secondary-color:#0D1432;
+  --theme-color:#17C788;
+  --property-quantity-color:#F5F5F5;
+}
+
+img{
+  width: 60px;
+  height: 40px;
+}
+
+.hero{
+  background-image: url('04.jpg');
+  height: 60vh;
+  width: 100%;
+}
+span{
+  color: #17C788;
+}
+select,option{
+  width: 10%;
+}
+.hero .row .hero-section{
+  height: 100%;
+}

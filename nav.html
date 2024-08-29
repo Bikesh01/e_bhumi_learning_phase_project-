@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @font-face {
+        font-family: bankgothic;
+        src: url(bankgothic-regular.ttf);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        letter-spacing: 1.5px;
+        font-family: jost;
+      }
+
+      html,
+      body {
+        text-transform: capitalize;
+       
+      }
+
+      a {
+        text-decoration: none;
+      }
+      li {
+        list-style: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 40px;
+        letter-spacing: 1.5px;
+      }
+
+      .nav {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10vw;
+        /* background-color: aquamarine; */
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        /* background-color: aqua; */
+      }
+      .catagories ul {
+        margin-left: 7vw;
+        display: flex;
+        gap: 50px;
+        font-size: 16.5px;
+        text-transform: uppercase;
+      }
+      .catagories ul li a {
+        position: relative;
+      }
+      .catagories ul li a::after {
+        position: absolute;
+        content: "";
+        top: 24px;
+        left: 0;
+        width: 0%;
+        border-bottom: 1px solid blue;
+        transition: all 0.3s linear;
+      }
+
+      .catagories ul li a:hover::after {
+        width: 100%;
+      }
+      img {
+        width: 80px;
+        height: 60px;
+      }
+
+      .right {
+        padding: 12px;
+        background-color: green;
+        border-radius: 10px;
+      }
+
+      .right a {
+        font-size: 17.5px;
+        color: whitesmoke;
+      }
+
+      /***** Start hero Section *****/
+      .hero-section {
+        width: 100%;
+        height: 400px;
+        background-image: url("https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?cs=srgb&dl=pexels-binyamin-mellish-186077.jpg&fm=jpg");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* background-color: aquamarine; */
+      }
+
+      .hero-containt {
+        height: 400px;
+        display: flex;
+        margin-left: 13.2vw;
+        /* justify-content: center; */
+        align-items: center;
+        padding: 20px 10vw;
+      }
+
+      h1 {
+        font-size: 70px;
+        color: rgb(50, 247, 50);
+      }
+      h2 {
+        font-size: 35px;
+        margin-top: 5px;
+        margin-bottom: 40px;
+        color: whitesmoke;
+      }
+      #cata2 {
+        margin-left: 2vw;
+        margin-right: 2vw;
+      }
+      select,
+      input {
+        border-radius: 10px;
+        width: 180px;
+        height: 40px;
+        text-align: center;
+      }
+      input {
+        width: 500px;
+      }
+      /***** End hero Section *****/
+      .recent-added {
+        padding: 20px 10vw;
+      }
+      .recent-added h2 {
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+        color: black;
+      }
+      .grid-col-six {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .card1 {
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: start;
+
+        /* background-color: aqua; */
+        position: relative;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+      .card1 img {
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+      }
+      .card1 .card-price {
+        position: absolute;
+        top: 39%;
+        right: 54%;
+        color: rgb(55, 248, 55);
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .card1:hover {
+        scale: 1.05;
+        transition: all 0.3s linear;
+      }
+      .card1 .location-detail {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .card1 .card-detail {
+        padding-top: 10px;
+        /* padding-left: 30px; */
+        line-height: 25px;
+      }
+      .card1 h5 {
+        font-size: 28px;
+        color: rgb(16, 150, 16);
+        margin-bottom: 16px;
+      }
+      .card1 .card-content-feature{
+        padding: 0 100px 0 0;
+      }
+      
+
+      .card1 .card-content-feature .card-feature {
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+      }
+
+
+      .card1 .card-content-feature .card-value {
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="left">
+        <div class="image">
+          <img src="logo.svg" alt="" />
+        </div>
+
+        <div class="catagories">
+          <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="right">
+        <a href="">Summit property</a>
+      </div>
+    </div>
+
+    <!--------- Start hero Section --------->
+    <div class="hero-section">
+      <div class="hero-containt">
+        <div class="hero-main">
+          <div class="hero-heading">
+            <h1>Find</h1>
+            <h2>Your Dream house</h2>
+          </div>
+          <div class="input-fields">
+            <select name="type" id="cata1">
+              <option value="rent">Rent</option>
+              <option value="rent">sell</option>
+              <option value="rent">buy</option>
+            </select>
+            <select name="type" id="cata2">
+              <option value="rent">House</option>
+              <option value="rent">apartment</option>
+              <option value="flat">flat</option>
+            </select>
+
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search Property..."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------- End hero Section --------->
+
+    <!--------- Start cARD Section --------->
+
+    <div class="recent-added">
+      <h2>Recently added</h2>
+      <div class="card">
+        <div class="card-main grid-col-six">
+          <div class="card1">
+            <div class="card-img">
+              <img
+                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg  "
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <h5>Appartment</h5>
+              <div class="location-detail">
+                <i class="ri-map-pin-line"></i>
+                <p>itahari-20, sunsari</p>
+              </div>
+              <div class="card-price">Rs 100,000</div>
+              <div class="card-content-feature">
+                <div class="card-value">
+                  <div class="bhk">2123</div>
+                  <div class="bhk">2</div>
+                  <div class="bhk">1</div>
+                  <div class="bhk">3</div>
+                  <div class="bhk">north</div>
+                  <div class="bhk">3 m</div>
+                </div>
+                <div class="card-feature">
+                  <div class="bhk">Sqft</div>
+                  <div class="bhk">bhk</div>
+                  <div class="bhk">kitchen</div>
+                  <div class="bhk">bathroom</div>
+                  <div class="bhk">face</div>
+                  <div class="bhk">road access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-img">
+              <img
+                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg  "
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <h5>Appartment</h5>
+              <div class="location-detail">
+                <i class="ri-map-pin-line"></i>
+                <p>itahari-20, sunsari</p>
+              </div>
+              <div class="card-price">Rs 100,000</div>
+              <div class="card-content-feature">
+                <div class="card-value">
+                  <div class="bhk">2123</div>
+                  <div class="bhk">2</div>
+                  <div class="bhk">1</div>
+                  <div class="bhk">3</div>
+                  <div class="bhk">north</div>
+                  <div class="bhk">3 m</div>
+                </div>
+                <div class="card-feature">
+                  <div class="bhk">Sqft</div>
+                  <div class="bhk">bhk</div>
+                  <div class="bhk">kitchen</div>
+                  <div class="bhk">bathroom</div>
+                  <div class="bhk">face</div>
+                  <div class="bhk">road access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-img">
+              <img
+                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg  "
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <h5>Appartment</h5>
+              <div class="location-detail">
+                <i class="ri-map-pin-line"></i>
+                <p>itahari-20, sunsari</p>
+              </div>
+              <div class="card-price">Rs 100,000</div>
+              <div class="card-content-feature">
+                <div class="card-value">
+                  <div class="bhk">2123</div>
+                  <div class="bhk">2</div>
+                  <div class="bhk">1</div>
+                  <div class="bhk">3</div>
+                  <div class="bhk">north</div>
+                  <div class="bhk">3 m</div>
+                </div>
+                <div class="card-feature">
+                  <div class="bhk">Sqft</div>
+                  <div class="bhk">bhk</div>
+                  <div class="bhk">kitchen</div>
+                  <div class="bhk">bathroom</div>
+                  <div class="bhk">face</div>
+                  <div class="bhk">road access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-img">
+              <img
+                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg  "
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <h5>Appartment</h5>
+              <div class="location-detail">
+                <i class="ri-map-pin-line"></i>
+                <p>itahari-20, sunsari</p>
+              </div>
+              <div class="card-price">Rs 100,000</div>
+              <div class="card-content-feature">
+                <div class="card-value">
+                  <div class="bhk">2123</div>
+                  <div class="bhk">2</div>
+                  <div class="bhk">1</div>
+                  <div class="bhk">3</div>
+                  <div class="bhk">north</div>
+                  <div class="bhk">3 m</div>
+                </div>
+                <div class="card-feature">
+                  <div class="bhk">Sqft</div>
+                  <div class="bhk">bhk</div>
+                  <div class="bhk">kitchen</div>
+                  <div class="bhk">bathroom</div>
+                  <div class="bhk">face</div>
+                  <div class="bhk">road access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-img">
+              <img
+                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg  "
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <h5>Appartment</h5>
+              <div class="location-detail">
+                <i class="ri-map-pin-line"></i>
+                <p>itahari-20, sunsari</p>
+              </div>
+              <div class="card-price">Rs 100,000</div>
+              <div class="card-content-feature">
+                <div class="card-value">
+                  <div class="bhk">2123</div>
+                  <div class="bhk">2</div>
+                  <div class="bhk">1</div>
+                  <div class="bhk">3</div>
+                  <div class="bhk">north</div>
+                  <div class="bhk">3 m</div>
+                </div>
+                <div class="card-feature">
+                  <div class="bhk">Sqft</div>
+                  <div class="bhk">bhk</div>
+                  <div class="bhk">kitchen</div>
+                  <div class="bhk">bathroom</div>
+                  <div class="bhk">face</div>
+                  <div class="bhk">road access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-img">
+              <img
+                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg  "
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <h5>Appartment</h5>
+              <div class="location-detail">
+                <i class="ri-map-pin-line"></i>
+                <p>itahari-20, sunsari</p>
+              </div>
+              <div class="card-price">Rs 100,000</div>
+              <div class="card-content-feature">
+                <div class="card-value">
+                  <div class="bhk">2123</div>
+                  <div class="bhk">2</div>
+                  <div class="bhk">1</div>
+                  <div class="bhk">3</div>
+                  <div class="bhk">north</div>
+                  <div class="bhk">3 m</div>
+                </div>
+                <div class="card-feature">
+                  <div class="bhk">Sqft</div>
+                  <div class="bhk">bhk</div>
+                  <div class="bhk">kitchen</div>
+                  <div class="bhk">bathroom</div>
+                  <div class="bhk">face</div>
+                  <div class="bhk">road access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-img">
+              <img
+                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg  "
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <h5>Appartment</h5>
+              <div class="location-detail">
+                <i class="ri-map-pin-line"></i>
+                <p>itahari-20, sunsari</p>
+              </div>
+              <div class="card-price">Rs 100,000</div>
+              <div class="card-content-feature">
+                <div class="card-value">
+                  <div class="bhk">2123</div>
+                  <div class="bhk">2</div>
+                  <div class="bhk">1</div>
+                  <div class="bhk">3</div>
+                  <div class="bhk">north</div>
+                  <div class="bhk">3 m</div>
+                </div>
+                <div class="card-feature">
+                  <div class="bhk">Sqft</div>
+                  <div class="bhk">bhk</div>
+                  <div class="bhk">kitchen</div>
+                  <div class="bhk">bathroom</div>
+                  <div class="bhk">face</div>
+                  <div class="bhk">road access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-img">
+              <img
+                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg  "
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <h5>Appartment</h5>
+              <div class="location-detail">
+                <i class="ri-map-pin-line"></i>
+                <p>itahari-20, sunsari</p>
+              </div>
+              <div class="card-price">Rs 100,000</div>
+              <div class="card-content-feature">
+                <div class="card-value">
+                  <div class="bhk">2123</div>
+                  <div class="bhk">2</div>
+                  <div class="bhk">1</div>
+                  <div class="bhk">3</div>
+                  <div class="bhk">north</div>
+                  <div class="bhk">3 m</div>
+                </div>
+                <div class="card-feature">
+                  <div class="bhk">Sqft</div>
+                  <div class="bhk">bhk</div>
+                  <div class="bhk">kitchen</div>
+                  <div class="bhk">bathroom</div>
+                  <div class="bhk">face</div>
+                  <div class="bhk">road access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-img">
+              <img
+                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg  "
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <h5>Appartment</h5>
+              <div class="location-detail">
+                <i class="ri-map-pin-line"></i>
+                <p>itahari-20, sunsari</p>
+              </div>
+              <div class="card-price">Rs 100,000</div>
+              <div class="card-content-feature">
+                <div class="card-value">
+                  <div class="bhk">2123</div>
+                  <div class="bhk">2</div>
+                  <div class="bhk">1</div>
+                  <div class="bhk">3</div>
+                  <div class="bhk">north</div>
+                  <div class="bhk">3 m</div>
+                </div>
+                <div class="card-feature">
+                  <div class="bhk">Sqft</div>
+                  <div class="bhk">bhk</div>
+                  <div class="bhk">kitchen</div>
+                  <div class="bhk">bathroom</div>
+                  <div class="bhk">face</div>
+                  <div class="bhk">road access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="card-img">
+              <img
+                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg  "
+                alt=""
+              />
+            </div>
+            <div class="card-detail">
+              <h5>Appartment</h5>
+              <div class="location-detail">
+                <i class="ri-map-pin-line"></i>
+                <p>itahari-20, sunsari</p>
+              </div>
+              <div class="card-price">Rs 100,000</div>
+              <div class="card-content-feature">
+                <div class="card-value">
+                  <div class="bhk">2123</div>
+                  <div class="bhk">2</div>
+                  <div class="bhk">1</div>
+                  <div class="bhk">3</div>
+                  <div class="bhk">north</div>
+                  <div class="bhk">3 m</div>
+                </div>
+                <div class="card-feature">
+                  <div class="bhk">Sqft</div>
+                  <div class="bhk">bhk</div>
+                  <div class="bhk">kitchen</div>
+                  <div class="bhk">bathroom</div>
+                  <div class="bhk">face</div>
+                  <div class="bhk">road access</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------- End cARD Section --------->
+  </body>
+</html>
